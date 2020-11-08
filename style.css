@@ -20,9 +20,9 @@ header {
     left: 0px;
 }
 
-.wrapper span,a {
+.wrapper a {
     color: #fff;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     font-family: "Josefin Sans", sans-serif;
     background: linear-gradient(to right, #ffffff 10%, rgb(255, 255, 255) 80%, #c5c5c5 15%);
@@ -38,7 +38,7 @@ header {
     display: inline-block;
 }
 
-.wrapper:hover span,a {
+.wrapper:hover a {
     background: linear-gradient(to right, #ffffff 60%, rgb(255, 112, 112) 30%, #ff8080 10%);
     background-size: auto auto;
     background-clip: border-box;
@@ -113,9 +113,7 @@ h1 {
     margin-left: 5px;
     
 } 
-.projects a{
-    z-index: 12;
-}
+ 
 .projects div:hover {
     border: 1px solid rgb(252, 140, 140);
 }
