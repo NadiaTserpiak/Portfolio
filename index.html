@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfoio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <header>
+
+        <ul>
+            <li class="wrapper" data-aos="fade-up" data-aos-duration="3000"><a href="/projects.html"> my Projects</a></li>
+            <li class="wrapper" data-aos="fade-down" data-aos-duration="3000"><a href="CV-Tserpiak2020.pdf" download>CV</a></li>
+
+        </ul>
+    </header>
+    <main>
+        <h1>
+            < <span class="txt">
+                Hello       </span> >
+        </h1>
+        <div id="name">Nadia Tserpiak</div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        setTimeout(function () {
+            document.getElementById("name").style.opacity = "1";
+        }, 4000);
+        const textTime = 2000;
+        const textNode = document.querySelector('.txt');
+        function textWriter(node, ms) {
+            const text = node.textContent;
+            let index = 0;
+            const textToShowArray = [
+                ' I`m front-end developer '
+            ];
+
+            let textToShow = text;
+
+            function reverse() {
+                const step = ms / textToShow.length;
+                const interval = setInterval(() => {
+                    textToShow = textToShow.slice(0, textToShow.length - 1);
+                    node.textContent = textToShow;
+                    if (textToShow.length === 0) {
+                        clearTimeout(interval);
+                        textToShow = textToShowArray[index];
+                        index++;
+                        forward();
+                    }
+                }, step)
+            }
+
+            function forward() {
+                const step = ms / textToShow.length;
+                const length = textToShow.length;
+                const copyText = textToShow;
+                let currentIndex = 1;
+                const interval = setInterval(() => {
+                    textToShow = copyText.slice(0, currentIndex);
+                    currentIndex++;
+
+                    node.textContent = textToShow;
+                }, step)
+            }
+            reverse();
+        }
+        textWriter(textNode, textTime);
+        $(".txt").delay(2000).fadeIn();
+
+    </script>
+</body>
+
+</html>
