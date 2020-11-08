@@ -126,7 +126,37 @@ h1 {
 .up {
     padding-bottom: 30px;
 }
-
+.projects span{
+     
+        color: #fff;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: "Josefin Sans", sans-serif;
+        background: linear-gradient(to right, #ffffff 10%, rgb(255, 255, 255) 80%, #c5c5c5 15%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 4s linear infinite;
+        cursor: pointer;
+        display: inline-block;
+    }
+    
+    .wrapper:hover span {
+        background: linear-gradient(to right, #ffffff 60%, rgb(255, 112, 112) 30%, #ff8080 10%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip2 4s linear infinite;
+    }
+ 
 @media (max-width: 1300px) {
     .projects {
         margin-top: 470px;
